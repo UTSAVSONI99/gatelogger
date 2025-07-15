@@ -32,7 +32,7 @@ export default function GuardActions() {
 
       {/* Truck Entry Section */}
       <Card>
-        <CardHeader>
+        <CardHeader className="flex items-center justify-between border-b">
           <CardTitle>Truck Entering</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col  ">
@@ -50,6 +50,7 @@ export default function GuardActions() {
               icon={<ArrowRight />}
             />
           </Link>
+          <hr className="my-2" />
           <Link href={"/admin/guard-actions/truck-in"}>
             <ActionButton
               className="w-full flex justify-between border-none shadow-none flex-row-reverse"
@@ -64,6 +65,7 @@ export default function GuardActions() {
               icon={<ArrowRight />}
             />
           </Link>
+          <hr className="my-2" />
           <div>
             <ActionButton
               className="w-full flex justify-between border-none shadow-none flex-row-reverse"

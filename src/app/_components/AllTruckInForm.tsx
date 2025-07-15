@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import MultipelImageInputComp from "./MultipelImageInputComp";
 
 export default function TruckEntryForm() {
   return (
@@ -14,17 +15,6 @@ export default function TruckEntryForm() {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Left Side: Image */}
-        <div className="flex items-center justify-center">
-          <Image
-            src="/truck-placeholder.jpg"
-            alt="Truck Image"
-            width={350}
-            height={200}
-            className="rounded-md border"
-          />
-        </div>
-
         {/* Right Side: Form */}
         <form className="space-y-4">
           <div className="grid gap-1">
@@ -66,7 +56,13 @@ export default function TruckEntryForm() {
             <Label htmlFor="remarks">Remarks/Item narration</Label>
             <Textarea id="remarks" placeholder="Enter any remarks..." />
           </div>
-
+          <MultipelImageInputComp
+            name="truckImages"
+            label="Upload Truck Images"
+            description="You can upload multiple images of the truck."
+            accept="image/*"
+            maxFiles={5}
+          />
           <Button type="submit" className="w-full mt-4">
             Submit Entry
           </Button>
