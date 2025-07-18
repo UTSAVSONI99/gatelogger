@@ -2,7 +2,7 @@ import { hash } from "bcryptjs";
 import prisma from "@/lib/prisma";
 
 async function createUser() {
-  const hashed = await hash("@_utsav99", 10);
+  const hashed = await hash("utsav99", 10);
   await prisma.user.create({
     data: {
       email: "utsavsoni619@gmail.com",
